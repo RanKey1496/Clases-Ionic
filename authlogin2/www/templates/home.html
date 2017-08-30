@@ -1,0 +1,22 @@
+<ion-view view-title="Home">
+	<ion-header-bar align-title="center" class="bar-positive">
+	  <h1 class="title">Welcome</h1>
+	  <div class="buttons">
+	    <button class="button" ng-click="home.login()">Login</button>
+	  </div>
+	</ion-header-bar>
+  <ion-content class="padding">
+    <div class="list" ng-if="home.users" ng-repeat="user in home.users">
+		<a class="item" >
+			<h2>{{user.username}}</h2>
+			<p>{{user._id}}</p>
+			<p>{{user.email}}</p>
+			<p>{{user.role}}</p>
+		</a>
+    </div>
+    <span class="assertive" ng-if="home.error">
+    	<strong>There was an error:</strong> {{search.error}}
+		<br> Please go back and login again
+    </span>
+  </ion-content>
+</ion-view>

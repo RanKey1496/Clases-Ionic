@@ -1,0 +1,18 @@
+<ion-view view-title="Notas Tristes">
+	<ion-content ng-controller="ListController">
+		<ion-list>
+			<ion-item class="item-remove-animate item-icon-right" href="/#/edit/{{nota.id}}" ng-repeat="nota in notas">
+				<i class="icon ion-ios-arrow-right"></i>
+				<h2>{{nota.titulo}}</h2>
+            	<p>{{nota.descripcion}}</p>
+
+            	
+            	<ion-option-button class="button-assertive icon-left ion-trash-b" ng-click="remove(nota.id)"></ion-option-button>
+            	<ion-option-button class="button-stable icon-left ion-more" ng-click="more(nota.id)"></ion-option-button>
+			</ion-item>
+		</ion-list>
+    </ion-content>
+    <div class="bar bar-footer bar-stable">
+    	<a class="button button-positive icon-left ion-compose" href="/#/create">Agregar</a>
+    </div>
+</ion-view>

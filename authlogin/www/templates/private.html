@@ -1,0 +1,25 @@
+<ion-view view title="Search User">
+	<ion-content class="padding">
+		<div class="list">
+		  <label class="item item-input">
+		    <input type="text" placeholder="User Id" ng-model="search.id">
+		  </label>
+		  <button class="button button-block button-balanced" ng-click="search()">Buscar</button>
+		  <span class="assertive" ng-show="success">Invalid query</span>
+		</div>
+		<div class="list" ng-show="show">
+			<a class="item">
+				<h2>{{user.username}}</h2>
+				<p>{{user._id}}</p>
+				<p>{{user.email}}</p>
+				<p>{{user.role}}</p>
+			</a>
+		</div>
+	</ion-content>
+	<ion-footer-bar align-title="left" class="bar-assertive">
+	  <h1 class="title">Title!</h1>
+	  <div class="buttons"">
+	    <a class="button button-outline button-light" href="/#/logout">Logout</a>
+	  </div>
+	</ion-footer-bar>
+</ion-view>
